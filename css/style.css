@@ -1,0 +1,288 @@
+/* Las imagaenes se tienen que guardar en un tamaño de 609 X 844 */
+
+:root {
+
+    --background: #201932;
+    --box-shadow: 10px 10px 16px #1b152b,
+        -10px -10px 16px #251d3a;
+    --background-cont: linear-gradient(145deg, #4f486378, #1f1445d7);
+    --box-shadow-btn: 8px 8px 16px #1b152b,
+        -8px -8px 16px #251d3a;
+    --gray: #797d7f;
+    --color-btnPlay: linear-gradient(35deg,
+            hsl(251deg 75% 60%) 0%,
+            hsl(257deg 73% 60%) 14%,
+            hsl(262deg 72% 59%) 26%,
+            hsl(267deg 70% 58%) 36%,
+            hsl(272deg 68% 57%) 44%,
+            hsl(277deg 66% 56%) 52%,
+            hsl(281deg 64% 55%) 59%,
+            hsl(285deg 62% 54%) 65%,
+            hsl(290deg 60% 53%) 70%,
+            hsl(294deg 59% 52%) 75%,
+            hsl(298deg 57% 51%) 80%,
+            hsl(302deg 58% 51%) 84%,
+            hsl(305deg 62% 52%) 88%,
+            hsl(309deg 66% 53%) 91%,
+            hsl(312deg 69% 54%) 94%,
+            hsl(314deg 73% 55%) 97%,
+            hsl(317deg 77% 56%) 99%,
+            hsl(319deg 80% 56%) 101%);
+
+
+
+    --background-btnface: linear-gradient(145deg, #1fb1e6, #1a95c2);
+    --box-shadow-btnface: 2px 2px 5px #198cb7,
+        -2px -2px 8px #21bef7;
+
+    --background-btnwhatsapp: linear-gradient(145deg, #00c369, #00a458);
+    --box-shadow-btnwhatsapp: 2px 2px 5px #03894b,
+        -2px -2px 8px #129e5d;
+
+
+    --background-btnplay: linear-gradient(145deg, #c144df, #a23abb);
+    --box-shadow-btnplay: 2px 2px 25px #9936b1,
+        -2px -2px px #cf4aef;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+}
+
+.container__player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    max-width: 425px;
+    max-height: 736px;
+    height: 85%;
+    background-color: var(--background);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* <!-- CONTENEDOR SLIDER --> */
+.container__slide {
+    /* flex: 1; */
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100%;
+}
+
+.position {
+    /* background-color: #fe615c; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.slider {
+    background-image: url(../assets/img/img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    animation: animate 10s infinite;
+    -webkit-animation: animate 10s infinite;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@keyframes animate {
+    20% {
+        background-image: url(../assets/img/img3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    40% {
+        background-image: url(../assets/img/img4.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    60% {
+        background-image: url(../assets/img/img5.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    80% {
+        background-image: url(../assets/img/img6.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+/* <!-- CONTENEDOR REPRODUCTION --> */
+.container__playerbtn {
+    display: flex;
+    flex-direction: row;
+    /*background-color: rgb(192, 192, 206, 0.1);
+    */
+    background: var(--background-cont);
+    width: 100%;
+    height: 150px;
+    margin-top: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.player_btnRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+.player__btnPlay {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.player__btn--small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--gray);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: var(--box-shadow-btn)
+}
+
+/* Boton de play */
+.player__btn--mediun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-btnPlay);
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 23px 22px 23px 27px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: var(--box-shadow-btnplay)
+}
+
+.player__btn--mediun:active {
+    box-shadow: inset -8px -8px 20px #7902be, -6px -6px 20px 0px rgba(202, 48, 226, 0.6),
+        8px 8px 20px 0px #0003, 5px 5px 6px 0px #0003;
+    ;
+}
+
+.img__btns {
+    width: 100%;
+    height: 100%;
+
+}
+
+.btn__faces {
+    background: var(--background-btnface);
+    box-shadow: var(--box-shadow-btnface);
+    padding: 10px;
+}
+
+.btn__faces:active {
+    box-shadow: inset -8px -8px 20px #0491d2, -6px -6px 20px 0px rgba(91, 149, 242, 0.6),
+        8px 8px 20px 0px #0003, 5px 5px 6px 0px #0003;
+    ;
+}
+
+.btn__whatsapp {
+    background: var(--background-btnwhatsapp);
+    box-shadow: var(--box-shadow-btnwhatsapp);
+    padding: 10px;
+}
+
+.btn__whatsapp:active {
+    box-shadow: inset -8px -8px 20px #04d25a, -6px -6px 20px 0px rgba(91, 242, 129, 0.6),
+        8px 8px 20px 0px #0003, 5px 5px 6px 0px #0003;
+    ;
+}
+
+#audioPlayer {
+    display: none;
+}
